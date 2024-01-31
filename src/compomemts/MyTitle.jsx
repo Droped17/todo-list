@@ -1,5 +1,5 @@
-export default function MyTitle({icon,text}){
+export default function MyTitle({icon,text,size}){
     return (
-        <p>{text}</p>
+        <p style={{fontSize: size}}>{text}</p>
     );
 }
