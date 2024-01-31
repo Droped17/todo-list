@@ -13,11 +13,10 @@ import { Stack } from "react-bootstrap";
 import { useState } from "react";
 
 export default function HomePage() {
-
   return (
-    <div>
+    <div className="bg-dark text-white">
       <Container fluid className="">
-        <Row>
+        <Row className="gy-3 gx-3">
           <p>Your Name</p>
           <Col xs={12} sm={6} md={2}>
             <p>Date time</p>
@@ -46,7 +45,7 @@ export default function HomePage() {
           </Col>
           <Col xs={12} sm={6} md={4}>
             <MyTitle icon={`icon`} text={`Status:`} size={`10`} />
-            <Accordion defaultActiveKey="0">
+            <Accordion defaultActiveKey="0" className="accordion">
               <Accordion.Item eventKey="0">
                 <Accordion.Header>Preview</Accordion.Header>
                 <Accordion.Body>
@@ -57,7 +56,7 @@ export default function HomePage() {
               </Accordion.Item>
             </Accordion>
             <MyTitle icon={`icon`} text={`Skills:`} size={`10`} />
-            <Row>
+            <Row >
               <Container style={{ maxHeight: "200px", overflow: "auto" }}>
                 {skills.map((mySkill) => (
                   <div key={mySkill.id}>
@@ -93,7 +92,7 @@ export default function HomePage() {
               style={{ maxHeight: 200, width: "100%" }}
               fluid
             />
-            <Accordion defaultActiveKey="0">
+            <Accordion defaultActiveKey="0" className="accordion">
               <Accordion.Item eventKey="0">
                 <Accordion.Header>Quest Board</Accordion.Header>
                 <Accordion.Body>
@@ -110,14 +109,19 @@ export default function HomePage() {
               <Row className="gy-3 gx-3">
                 {thisMonth.map((cardItem) => (
                   <Col key={cardItem.id} xs={12} sm={6} md={6}>
-                    <Card style={{ height: "200px", minWidth: "100px" }}>
+                    <Card
+                      className="card"
+                      style={{ height: "200px", minWidth: "100px" }}
+                    >
                       <Card.Img
                         variant="top"
                         src={`${cardItem.img}`}
                         style={{ height: "100px", objectFit: "cover" }}
                       />
-                      <Card.Body>
-                        <Card.Title>{cardItem.title}</Card.Title>
+                      <Card.Body className="d-flex align-items-center">
+                        <Card.Title className="text-white">
+                          {cardItem.title}
+                        </Card.Title>
                       </Card.Body>
                     </Card>
                   </Col>
@@ -129,17 +133,13 @@ export default function HomePage() {
           <Col xs={12} sm={6} md={2}>
             <Container fluid>
               <Row>
-                <span className="bg-secondary text-white">My Quest</span>
+                <span className="bg-secondary text-white p-3">My Quest</span>
                 <div className="main-quest">
                   <p>Main Quest</p>
                   <Form>
                     {mainQuest.map((type) => (
                       <div key={type.id} className="mb-3">
-                        <Form.Check
-                          type={"checkbox"}
-                          id={`check-api-${type}`}
-                          
-                        >
+                        <Form.Check type={"checkbox"} id={`check-api-${type}`}>
                           <Form.Check.Input type={"checkbox"} isValid />
                           <Form.Check.Label>{`${type.title}`}</Form.Check.Label>
                         </Form.Check>
