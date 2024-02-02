@@ -13,6 +13,11 @@ import { Stack } from "react-bootstrap";
 import { useState } from "react";
 
 export default function HomePage() {
+  const data = [
+    ["Item 1", "Item 2", "Item 3"],
+    ["Item 4", "Item 5", "Item 6"],
+    ["Item 7", "Item 8", "Item 9"],
+  ];
   return (
     <div className="bg-dark text-white">
       <Container fluid className="">
@@ -56,7 +61,7 @@ export default function HomePage() {
               </Accordion.Item>
             </Accordion>
             <MyTitle icon={`icon`} text={`Skills:`} size={`10`} />
-            <Row >
+            <Row>
               <Container style={{ maxHeight: "200px", overflow: "auto" }}>
                 {skills.map((mySkill) => (
                   <div key={mySkill.id}>
@@ -151,6 +156,16 @@ export default function HomePage() {
             </Container>
           </Col>
         </Row>
+
+        <Container>
+          {data.map((row, rowIndex) => (
+            <Row key={rowIndex}>
+              {row.map((item, colIndex) => (
+                <Col key={colIndex}>{item}</Col>
+              ))}
+            </Row>
+          ))}
+        </Container>
       </Container>
     </div>
   );

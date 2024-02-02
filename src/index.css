@@ -1,19 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .accordion {
   --bs-accordion-btn-bg: #212529;
   --bs-accordion-active-bg: #212529;
   --bs-accordion-active-color: #212529;
-  
+  --bs-accordion-border-width: 0;
 }
 
 .card {
-background: rgba(149, 103, 103, 0);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
+  background: rgba(149, 103, 103, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: 0.2s;
 }
 
-.card:hover{
-    background: #212654;
-    cursor: pointer;
+.card:hover {
+  background: #212654;
+  cursor: pointer;
 }
