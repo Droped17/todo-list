@@ -9,19 +9,19 @@ import UserMainQuest from "../compomemts/homepage/UserMainQuest";
 export default function HomePage() {
   return (
     <div className="bg-dark text-white">
-      <Container fluid className="">
+      <Container fluid className="primary-color">
         <Row className="gy-3 gx-3">
           <p>Your Name</p>
-          <Col xs={12} sm={6} md={2}>
+          <Col xs={12} sm={6} md={6} lg={2}>
             <UserDetail />
           </Col>
-          <Col xs={12} sm={6} md={4}>
+          <Col xs={12} sm={6} md={6} lg={4}>
             <UserStatus />
           </Col>
-          <Col xs={12} sm={6} md={4}>
+          <Col xs={12} sm={6} md={6} lg={4}>
             <UserThisMonth />
           </Col>
-          <Col xs={12} sm={6} md={2}>
+          <Col xs={12} sm={6} md={6} lg={2}>
             <UserMainQuest />
           </Col>
         </Row>
