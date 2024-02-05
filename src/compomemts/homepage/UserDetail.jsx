@@ -29,6 +29,18 @@ export default function UserDetail() {
         <p>Gen:</p>
         <p>Lorem ipsum dolor sit amet consectetur.</p>
       </Container>
+      <Container fluid>
+        <div className="d-flex justify-content-between">
+          <span>Partner: </span>
+          <span>asd</span>
+        </div>
+        <span>asdasd</span>
+        <Image
+          src="src/assets/images/Cat-Memes-07.webp"
+          style={{ height: "auto", width: "100%" }}
+          fluid
+        />
+      </Container>
     </div>
   );
 }

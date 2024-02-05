@@ -11,7 +11,8 @@ export default function HomePage() {
     <div className="bg-dark text-white">
       <Container fluid className="primary-color">
         <Row className="gy-3 gx-3">
-          <p>Your Name</p>
+          <span>Your Name</span>
+          <span>JOB: job title</span>
           <Col xs={12} sm={6} md={6} lg={2}>
             <UserDetail />
           </Col>
